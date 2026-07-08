@@ -312,7 +312,7 @@
                 <div class="flex justify-between items-center mb-4">
                     <div>
                         <h3 class="text-xl font-extrabold text-neutral-800">פירוט מקורות המימון</h3>
-                        <p class="text-xs text-neutral-500 mt-1">סימון "בוצע" מעדכן את הכספים שהתקבלו בפועל</p>
+                        <p class="text-xs text-neutral-500 mt-1">לחיצה על שורה כלשהי מסמנת אותה כ"בוצע" ומפעילה את החישוב</p>
                     </div>
                     <button onclick="openFundingModal()" class="bg-neutral-900 text-white px-3 py-2 rounded-xl text-xs font-bold shadow-sm hover:bg-neutral-800 active:scale-95 transition flex items-center gap-2">
                         <i class="fa-solid fa-plus text-[10px]"></i>
@@ -771,14 +771,16 @@
 
                 catItems.forEach(item => {
                     const itemRow = document.createElement('div');
-                    itemRow.className = `p-3 rounded-xl border flex justify-between items-center transition ${item.done ? 'bg-emerald-50/40 border-emerald-100' : 'bg-white border-neutral-100'}`;
+                    // השורה כולה היא קליקבילית לשינוי מצב "בוצע"
+                    itemRow.className = `p-3 rounded-xl border flex justify-between items-center transition cursor-pointer hover:bg-neutral-50/50 ${item.done ? 'bg-emerald-50/40 border-emerald-100' : 'bg-white border-neutral-100'}`;
+                    itemRow.setAttribute('onclick', `toggleFundingDone('${item.id}')`);
                     
                     itemRow.innerHTML = `
                         <div class="flex items-center gap-3">
                             <!-- צ'קבוקס בוצע -->
-                            <button onclick="toggleFundingDone('${item.id}')" class="w-6 h-6 rounded-lg border flex items-center justify-center transition ${item.done ? 'bg-emerald-500 border-emerald-500 text-white' : 'bg-white border-neutral-300 text-transparent hover:border-emerald-500'}">
+                            <div class="w-6 h-6 rounded-lg border flex items-center justify-center transition ${item.done ? 'bg-emerald-500 border-emerald-500 text-white' : 'bg-white border-neutral-300 text-transparent'}">
                                 <i class="fa-solid fa-check text-xs"></i>
-                            </button>
+                            </div>
                             <div>
                                 <span class="font-bold text-sm text-neutral-800 ${item.done ? 'line-through text-neutral-400' : ''}">${item.name}</span>
                                 ${item.returnVal && item.returnVal !== '-' ? `<span class="text-[10px] bg-amber-50 text-amber-800 px-1.5 py-0.5 rounded-md font-bold mr-2">החזר: ${item.returnVal}</span>` : ''}
@@ -788,7 +790,8 @@
                         <div class="flex items-center gap-4">
                             <span class="font-black text-sm ${item.amount < 0 ? 'text-rose-600' : 'text-neutral-800'}">${formatILS(item.amount)}</span>
                             
-                            <div class="flex gap-1">
+                            <!-- מניעת פעפוע האירוע (stopPropagation) בכפתורי העריכה והמחיקה כדי שלא יסמנו "בוצע" בטעות -->
+                            <div class="flex gap-1 animate-fade-in" onclick="event.stopPropagation();">
                                 <button onclick="openEditFundingModal('${item.id}')" class="w-7 h-7 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center hover:bg-blue-100 transition active:scale-90">
                                     <i class="fa-solid fa-pen text-[10px]"></i>
                                 </button>
@@ -839,7 +842,6 @@
             document.getElementById('item-modal').classList.remove('hidden');
         }
 
-        // סגירת מודל ההוצאות
         function closeModal() {
             document.getElementById('item-modal').classList.add('hidden');
         }

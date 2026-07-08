@@ -663,6 +663,11 @@
             }
         }
 
+        // רינדור המסך הנוכחי באופן כללי באתחול
+        function renderCurrentScreen() {
+            navigateTo(appState.currentScreen);
+        }
+
         // רינדור מסך אירוע (חתונה או חינה)
         function renderEventScreen(type) {
             const isWedding = (type === 'wedding');
@@ -834,6 +839,7 @@
             document.getElementById('item-modal').classList.remove('hidden');
         }
 
+        // סגירת מודל ההוצאות
         function closeModal() {
             document.getElementById('item-modal').classList.add('hidden');
         }

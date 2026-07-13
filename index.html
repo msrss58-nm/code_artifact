@@ -75,7 +75,7 @@
                         <span id="dash-total" class="text-base font-extrabold text-neutral-800">0 ₪</span>
                     </div>
                     <div class="bg-emerald-50 p-3 rounded-2xl border border-emerald-100">
-                        <span class="text-[11px] text-emerald-600 block mb-1 font-semibold">שולם (מקדמות)</span>
+                        <span class="text-[11px] text-emerald-600 block mb-1 font-semibold">שולם בפועל</span>
                         <span id="dash-paid" class="text-base font-extrabold text-emerald-700">0 ₪</span>
                     </div>
                     <div class="bg-rose-50 p-3 rounded-2xl border border-rose-100">
@@ -87,7 +87,7 @@
                 <!-- מד התקדמות תשלומים -->
                 <div class="mt-5">
                     <div class="flex justify-between text-xs text-neutral-500 mb-1">
-                        <span class="font-bold">אחוז ששולם מהתקציב (מקדמות שכבר שולמו)</span>
+                        <span class="font-bold">אחוז ששולם מהתקציב (מקדמות ותשלומים שבוצעו)</span>
                         <span id="dash-percent" class="font-bold text-emerald-600">0%</span>
                     </div>
                     <div class="w-full bg-neutral-100 h-2.5 rounded-full overflow-hidden">
@@ -114,11 +114,11 @@
                                 <span id="dash-w-total" class="font-bold text-neutral-800">0 ₪</span>
                             </div>
                             <div class="flex justify-between text-sm">
-                                <span class="text-emerald-600 font-medium">כמה שולם עד כה (מקדמות):</span>
+                                <span class="text-emerald-600 font-medium">כמה שולם עד כה:</span>
                                 <span id="dash-w-paid" class="font-bold text-emerald-600">0 ₪</span>
                             </div>
                             <div class="flex justify-between text-sm">
-                                <span class="text-rose-600 font-medium">יתרה לתשלום:</span>
+                                <span class="text-rose-600 font-medium">יתרה לתשלום (בתא הצהוב):</span>
                                 <span id="dash-w-remaining" class="font-bold text-rose-600">0 ₪</span>
                             </div>
                         </div>
@@ -186,9 +186,9 @@
                     <!-- התייחסות למקדמות ששולמו -->
                     <div class="bg-emerald-50/50 rounded-2xl p-4 border border-emerald-100 flex items-center justify-between">
                         <div>
-                            <span class="text-xs text-neutral-500 block">מקדמות ששולמו (חתונה + חינה)</span>
+                            <span class="text-xs text-neutral-500 block">מקדמות ותשלומים שבוצעו בפועל (משולב)</span>
                             <span id="dash-advances-paid" class="text-xl font-black text-emerald-800">0 ₪</span>
-                            <span class="text-[10px] text-neutral-400 block mt-0.5">כסף זה כבר יצא מהחשבון / מקורות המימון</span>
+                            <span class="text-[10px] text-neutral-400 block mt-0.5">כסף זה כבר יצא מחשבון הבנק / המקורות</span>
                         </div>
                         <div class="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-700">
                             <i class="fa-solid fa-circle-check"></i>
@@ -209,11 +209,11 @@
                 </div>
             </div>
 
-            <!-- טיפ/השראה קטנה -->
+            <!-- טיפים והסברים פיננסיים -->
             <div class="bg-amber-50/50 rounded-2xl p-4 border border-amber-200/50 flex gap-3 items-start">
                 <span class="text-xl">💡</span>
                 <p class="text-xs text-amber-800 leading-relaxed">
-                    <strong>שימו לב:</strong> המקדמות ששולמו נחשבות כחלק מההוצאות שכבר יצאו מהתקציב. השתמשו במסך "מימון" כדי לעקוב בדיוק מתי נכנסים חסכונות נוספים או הלוואות שאושרו.
+                    <strong>טיפ לניהול נכון:</strong> לחצו על כפתור 💍 חתונה או 🎨 חינה כדי לראות ולנהל את חלוקת שלושת התשלומים של כל ספק וספק. תוכלו לסמן תשלום כ"בוצע" בלחיצה מהירה אחת!
                 </p>
             </div>
         </div>
@@ -235,7 +235,7 @@
                 <div class="flex justify-between items-start mb-4">
                     <div>
                         <h2 id="event-title" class="text-2xl font-extrabold text-neutral-800">שם האירוע</h2>
-                        <p class="text-sm text-neutral-500 mt-1">נהלו, ערכו והוסיפו ספקים והוצאות בקלות</p>
+                        <p class="text-sm text-neutral-500 mt-1">ניהול חלוקת תשלומים (עד 3 תשלומים לכל ספק)</p>
                     </div>
                     <!-- כפתור הוספת פריט חדש -->
                     <button onclick="openAddModal()" class="bg-neutral-900 text-white px-4 py-2.5 rounded-2xl text-sm font-bold shadow-sm hover:bg-neutral-800 active:scale-95 transition flex items-center gap-2">
@@ -247,11 +247,11 @@
                 <!-- סטטיסטיקות פנימיות של האירוע -->
                 <div class="grid grid-cols-3 gap-2 text-center pt-2 border-t border-neutral-100">
                     <div>
-                        <span class="text-[10px] text-neutral-400 block mb-0.5 font-bold">סך הכל</span>
+                        <span class="text-[10px] text-neutral-400 block mb-0.5 font-bold">סך הכל עלות</span>
                         <span id="event-total-stat" class="text-base font-bold text-neutral-800">0 ₪</span>
                     </div>
                     <div>
-                        <span class="text-[10px] text-neutral-400 block mb-0.5 font-bold text-emerald-600">מקדמות ששולמו</span>
+                        <span class="text-[10px] text-neutral-400 block mb-0.5 font-bold text-emerald-600">שולם בפועל</span>
                         <span id="event-paid-stat" class="text-base font-bold text-emerald-600">0 ₪</span>
                     </div>
                     <div>
@@ -262,7 +262,7 @@
             </div>
 
             <!-- רשימת ההוצאות/ספקים בעיצוב כרטיסיות מותאם למובייל -->
-            <div class="space-y-3" id="items-list-container">
+            <div class="space-y-4" id="items-list-container">
                 <!-- פריטים ייווצרו כאן דינמית על ידי הג'אווהסקריפט -->
             </div>
         </div>
@@ -298,10 +298,10 @@
 
                     <!-- כרטיסיית השפעת מקדמות -->
                     <div class="bg-neutral-50 p-4 rounded-2xl border border-neutral-100">
-                        <span class="text-xs text-neutral-500 font-bold block mb-1">השפעת מקדמות ששולמו:</span>
+                        <span class="text-xs text-neutral-500 font-bold block mb-1">השפעת תשלומים שבוצעו:</span>
                         <div class="text-sm font-semibold text-neutral-800 space-y-1">
-                            <div>סה"כ מקדמות ששולמו: <span id="funding-advances-total" class="font-bold text-emerald-600">0 ₪</span></div>
-                            <div class="text-xs text-neutral-400">כסף זה כבר שולם בפועל מתוך ההון / הבנק לטובת הספקים באירועים.</div>
+                            <div>סה"כ שולם כבר: <span id="funding-advances-total" class="font-bold text-emerald-600">0 ₪</span></div>
+                            <div class="text-xs text-neutral-400">כסף זה כבר יצא מההון / מהבנק עבור מקדמות וספקים.</div>
                         </div>
                     </div>
                 </div>
@@ -312,7 +312,7 @@
                 <div class="flex justify-between items-center mb-4">
                     <div>
                         <h3 class="text-xl font-extrabold text-neutral-800">פירוט מקורות המימון</h3>
-                        <p class="text-xs text-neutral-500 mt-1">לחיצה על שורה כלשהי מסמנת אותה כ"בוצע" ומפעילה את החישוב</p>
+                        <p class="text-xs text-neutral-500 mt-1">לחיצה על שורה כלשהי מסמנת "בוצע" ומעדכנת את התזרים בפועל</p>
                     </div>
                     <button onclick="openFundingModal()" class="bg-neutral-900 text-white px-3 py-2 rounded-xl text-xs font-bold shadow-sm hover:bg-neutral-800 active:scale-95 transition flex items-center gap-2">
                         <i class="fa-solid fa-plus text-[10px]"></i>
@@ -343,12 +343,12 @@
     </div>
 
     <!-- ==================== מודל הוספה / עריכה דינמי להוצאות (Modal) ==================== -->
-    <div id="item-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div id="item-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 overflow-y-auto">
         <!-- רקע מטושטש כהה -->
         <div class="absolute inset-0 bg-neutral-900/40 backdrop-blur-sm" onclick="closeModal()"></div>
         
         <!-- חלון המודל -->
-        <div class="bg-white rounded-3xl w-full max-w-md p-6 relative z-10 shadow-2xl border border-neutral-100">
+        <div class="bg-white rounded-3xl w-full max-w-lg p-6 relative z-10 shadow-2xl border border-neutral-100 my-8">
             <h3 id="modal-title" class="text-xl font-extrabold text-neutral-800 mb-4">הוספת ספק / הוצאה</h3>
             
             <form id="item-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
@@ -360,20 +360,58 @@
                     <input type="text" id="modal-name" required placeholder="לדוגמה: דיג'יי, צלם, אלכוהול..." class="w-full bg-neutral-50 border border-neutral-200 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500/20 focus:border-amber-500">
                 </div>
 
-                <div class="grid grid-cols-2 gap-3">
-                    <div>
-                        <label class="block text-xs font-bold text-neutral-500 mb-1">עלות כוללת (₪)</label>
-                        <input type="number" id="modal-cost" min="0" required placeholder="0" class="w-full bg-neutral-50 border border-neutral-200 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500/20 focus:border-amber-500">
+                <div>
+                    <label class="block text-xs font-bold text-neutral-500 mb-1">עלות כוללת סופית (₪)</label>
+                    <input type="number" id="modal-cost" min="0" required placeholder="0" class="w-full bg-neutral-50 border border-neutral-200 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500/20 focus:border-amber-500 font-bold text-neutral-800">
+                </div>
+
+                <!-- חלוקת תשלומים בתוך המודל -->
+                <div class="border-t border-neutral-100 pt-3 space-y-3">
+                    <span class="text-xs font-extrabold text-neutral-400 block mb-1">פירוט תשלומים (עד 3 תשלומים):</span>
+                    
+                    <!-- תשלום 1 -->
+                    <div class="bg-neutral-50 p-3 rounded-2xl border border-neutral-100 space-y-2">
+                        <span class="text-xs font-bold text-neutral-600 block">תשלום ראשון (למשל מקדמה)</span>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                            <input type="number" id="pay1-amount" min="0" placeholder="סכום (₪)" class="bg-white border border-neutral-200 rounded-xl px-3 py-2 text-xs focus:outline-none">
+                            <input type="text" id="pay1-date" placeholder="תאריך יעד / הערה" class="bg-white border border-neutral-200 rounded-xl px-3 py-2 text-xs focus:outline-none">
+                            <div class="flex items-center gap-2 px-2">
+                                <input type="checkbox" id="pay1-done" class="w-4 h-4 rounded border-neutral-300 text-emerald-600 focus:ring-emerald-500">
+                                <label for="pay1-done" class="text-xs font-semibold text-neutral-600">סומן כשולם</label>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <label class="block text-xs font-bold text-neutral-500 mb-1">מקדמה ששולמה (₪)</label>
-                        <input type="number" id="modal-paid" min="0" required placeholder="0" class="w-full bg-neutral-50 border border-neutral-200 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500/20 focus:border-amber-500">
+
+                    <!-- תשלום 2 -->
+                    <div class="bg-neutral-50 p-3 rounded-2xl border border-neutral-100 space-y-2">
+                        <span class="text-xs font-bold text-neutral-600 block">תשלום שני</span>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                            <input type="number" id="pay2-amount" min="0" placeholder="סכום (₪)" class="bg-white border border-neutral-200 rounded-xl px-3 py-2 text-xs focus:outline-none">
+                            <input type="text" id="pay2-date" placeholder="תאריך יעד / הערה" class="bg-white border border-neutral-200 rounded-xl px-3 py-2 text-xs focus:outline-none">
+                            <div class="flex items-center gap-2 px-2">
+                                <input type="checkbox" id="pay2-done" class="w-4 h-4 rounded border-neutral-300 text-emerald-600 focus:ring-emerald-500">
+                                <label for="pay2-done" class="text-xs font-semibold text-neutral-600">סומן כשולם</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- תשלום 3 -->
+                    <div class="bg-neutral-50 p-3 rounded-2xl border border-neutral-100 space-y-2">
+                        <span class="text-xs font-bold text-neutral-600 block">תשלום שלישי (למשל תשלום סופי)</span>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                            <input type="number" id="pay3-amount" min="0" placeholder="סכום (₪)" class="bg-white border border-neutral-200 rounded-xl px-3 py-2 text-xs focus:outline-none">
+                            <input type="text" id="pay3-date" placeholder="תאריך יעד / הערה" class="bg-white border border-neutral-200 rounded-xl px-3 py-2 text-xs focus:outline-none">
+                            <div class="flex items-center gap-2 px-2">
+                                <input type="checkbox" id="pay3-done" class="w-4 h-4 rounded border-neutral-300 text-emerald-600 focus:ring-emerald-500">
+                                <label for="pay3-done" class="text-xs font-semibold text-neutral-600">סומן כשולם</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <div>
-                    <label class="block text-xs font-bold text-neutral-500 mb-1">מועד תשלום היתרה / הערות</label>
-                    <input type="text" id="modal-notes" placeholder="לדוגמה: בסוף האירוע, לפני האירוע..." class="w-full bg-neutral-50 border border-neutral-200 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500/20 focus:border-amber-500">
+                    <label class="block text-xs font-bold text-neutral-500 mb-1">הערות כלליות</label>
+                    <input type="text" id="modal-notes" placeholder="הערות נוספות על ספק זה..." class="w-full bg-neutral-50 border border-neutral-200 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500/20 focus:border-amber-500">
                 </div>
 
                 <div class="flex gap-2 pt-2">
@@ -445,34 +483,224 @@
     <!-- ==================== קוד הג'אווהסקריפט לניהול האפליקציה ==================== -->
     <script>
         // --- נתוני ברירת מחדל מהתמונות שהועלו ---
+        // שילוב מדויק של 3 התאריכים והסכומים של האולם כפי שמופיע בתצלום הראשון (image_0e7740.png)
         const DEFAULT_WEDDING_ITEMS = [
-            { id: "w1", name: 'אולם (250 מוזמנים)', cost: 112500, paid: 10000, notes: 'חצי ב-1/8/26, חצי ב-1/9/26' },
-            { id: "w2", name: 'אולם רזרבה (50 איש)', cost: 22500, paid: 0, notes: 'יום למחרת החתונה' },
-            { id: "w3", name: 'מדד', cost: 2000, paid: 0, notes: 'יום למחרת החתונה' },
-            { id: "w4", name: "דיג'יי", cost: 8000, paid: 1000, notes: 'בסוף החתונה' },
-            { id: "w5", name: 'צלם', cost: 7500, paid: 0, notes: 'בסוף החתונה' },
-            { id: "w6", name: 'וידאו', cost: 4850, paid: 1000, notes: 'בסוף החתונה' },
-            { id: "w7", name: 'להקה', cost: 4500, paid: 500, notes: 'בסוף החתונה' },
-            { id: "w8", name: 'מגנטים', cost: 2200, paid: 0, notes: 'בסוף החתונה' },
-            { id: "w9", name: 'מלצרים', cost: 2000, paid: 0, notes: 'בסוף החתונה' },
-            { id: "w10", name: 'ניתוח עיניים', cost: 6000, paid: 6000, notes: 'בוצע בחודש מאי 26' },
-            { id: "w11", name: 'אלכוהול', cost: 0, paid: 0, notes: 'לפני החתונה' },
-            { id: "w12", name: 'שטויות לרחבה', cost: 0, paid: 0, notes: 'לפני החתונה' },
-            { id: "w13", name: 'השכרת רכב', cost: 0, paid: 0, notes: 'לפני החתונה' }
+            { 
+                id: "w1", 
+                name: 'אולם (250 מוזמנים)', 
+                cost: 112500, 
+                notes: 'מצב אולם ראשי',
+                payments: [
+                    { amount: 10000, date: 'מקדמה', done: true },
+                    { amount: 51250, date: '1/8/26 (תש\' ראשון)', done: true },
+                    { amount: 51250, date: '1/9/26 (תש\' שני)', done: true }
+                ]
+            },
+            { 
+                id: "w2", 
+                name: 'אולם רזרבה (50 איש)', 
+                cost: 22500, 
+                notes: 'יום למחרת החתונה',
+                payments: [
+                    { amount: 22500, date: 'יום למחרת החתונה', done: false },
+                    { amount: 0, date: '', done: false },
+                    { amount: 0, date: '', done: false }
+                ]
+            },
+            { 
+                id: "w3", 
+                name: 'מדד', 
+                cost: 2000, 
+                notes: 'יום למחרת החתונה',
+                payments: [
+                    { amount: 2000, date: 'יום למחרת החתונה', done: false },
+                    { amount: 0, date: '', done: false },
+                    { amount: 0, date: '', done: false }
+                ]
+            },
+            { 
+                id: "w4", 
+                name: "דיג'יי", 
+                cost: 8000, 
+                notes: '',
+                payments: [
+                    { amount: 1000, date: 'מקדמה', done: true },
+                    { amount: 7000, date: 'בסוף החתונה', done: false },
+                    { amount: 0, date: '', done: false }
+                ]
+            },
+            { 
+                id: "w5", 
+                name: 'צלם', 
+                cost: 7500, 
+                notes: '',
+                payments: [
+                    { amount: 7500, date: 'בסוף החתונה', done: false },
+                    { amount: 0, date: '', done: false },
+                    { amount: 0, date: '', done: false }
+                ]
+            },
+            { 
+                id: "w6", 
+                name: 'וידאו', 
+                cost: 4850, 
+                notes: '',
+                payments: [
+                    { amount: 1000, date: 'מקדמה', done: true },
+                    { amount: 3850, date: 'בסוף החתונה', done: false },
+                    { amount: 0, date: '', done: false }
+                ]
+            },
+            { 
+                id: "w7", 
+                name: 'להקה', 
+                cost: 4500, 
+                notes: '',
+                payments: [
+                    { amount: 500, date: 'מקדמה', done: true },
+                    { amount: 4000, date: 'בסוף החתונה', done: false },
+                    { amount: 0, date: '', done: false }
+                ]
+            },
+            { 
+                id: "w8", 
+                name: 'מגנטים', 
+                cost: 2200, 
+                notes: '',
+                payments: [
+                    { amount: 2200, date: 'בסוף החתונה', done: false },
+                    { amount: 0, date: '', done: false },
+                    { amount: 0, date: '', done: false }
+                ]
+            },
+            { 
+                id: "w9", 
+                name: 'מלצרים', 
+                cost: 2000, 
+                notes: '',
+                payments: [
+                    { amount: 2000, date: 'בסוף החתונה', done: false },
+                    { amount: 0, date: '', done: false },
+                    { amount: 0, date: '', done: false }
+                ]
+            },
+            { 
+                id: "w10", 
+                name: 'ניתוח עיניים', 
+                cost: 6000, 
+                notes: 'בוצע במאי 26',
+                payments: [
+                    { amount: 6000, date: 'בוצע בחודש מאי 26', done: true },
+                    { amount: 0, date: '', done: false },
+                    { amount: 0, date: '', done: false }
+                ]
+            },
+            { 
+                id: "w11", 
+                name: 'אלכוהול', 
+                cost: 0, 
+                notes: 'לפני החתונה',
+                payments: [
+                    { amount: 0, date: 'לפני החתונה', done: false },
+                    { amount: 0, date: '', done: false },
+                    { amount: 0, date: '', done: false }
+                ]
+            },
+            { 
+                id: "w12", 
+                name: 'שטויות לרחבה', 
+                cost: 0, 
+                notes: 'לפני החתונה',
+                payments: [
+                    { amount: 0, date: 'לפני החתונה', done: false },
+                    { amount: 0, date: '', done: false },
+                    { amount: 0, date: '', done: false }
+                ]
+            },
+            { 
+                id: "w13", 
+                name: 'השכרת רכב', 
+                cost: 0, 
+                notes: 'לפני החתונה',
+                payments: [
+                    { amount: 0, date: 'לפני החתונה', done: false },
+                    { amount: 0, date: '', done: false },
+                    { amount: 0, date: '', done: false }
+                ]
+            }
         ];
 
         const DEFAULT_HENNA_ITEMS = [
-            { id: "h1", name: 'אולם 100 מוזמנים', cost: 28000, paid: 8400, notes: '-' },
-            { id: "h2", name: 'הפקה ותלבושות', cost: 5000, paid: 0, notes: '-' },
-            { id: "h3", name: "דיג'יי", cost: 1500, paid: 0, notes: '-' },
-            { id: "h4", name: 'צלם', cost: 2200, paid: 0, notes: '-' },
-            { id: "h5", name: 'עוגות', cost: 0, paid: 0, notes: '-' },
-            { id: "h6", name: 'עמדת ספינג\'', cost: 0, paid: 0, notes: '-' }
+            { 
+                id: "h1", 
+                name: 'אולם 100 מוזמנים', 
+                cost: 28000, 
+                notes: '',
+                payments: [
+                    { amount: 8400, date: 'מקדמה', done: true },
+                    { amount: 19600, date: 'ביום האירוע', done: false },
+                    { amount: 0, date: '', done: false }
+                ]
+            },
+            { 
+                id: "h2", 
+                name: 'הפקה ותלבושות', 
+                cost: 5000, 
+                notes: '',
+                payments: [
+                    { amount: 5000, date: 'ביום האירוע', done: false },
+                    { amount: 0, date: '', done: false },
+                    { amount: 0, date: '', done: false }
+                ]
+            },
+            { 
+                id: "h3", 
+                name: "דיג'יי", 
+                cost: 1500, 
+                notes: '',
+                payments: [
+                    { amount: 1500, date: 'ביום האירוע', done: false },
+                    { amount: 0, date: '', done: false },
+                    { amount: 0, date: '', done: false }
+                ]
+            },
+            { 
+                id: "h4", 
+                name: 'צלם', 
+                cost: 2200, 
+                notes: '',
+                payments: [
+                    { amount: 2200, date: 'ביום האירוע', done: false },
+                    { amount: 0, date: '', done: false },
+                    { amount: 0, date: '', done: false }
+                ]
+            },
+            { 
+                id: "h5", 
+                name: 'עוגות', 
+                cost: 0, 
+                notes: '',
+                payments: [
+                    { amount: 0, date: '', done: false },
+                    { amount: 0, date: '', done: false },
+                    { amount: 0, date: '', done: false }
+                ]
+            },
+            { 
+                id: "h6", 
+                name: 'עמדת ספינג\'', 
+                cost: 0, 
+                notes: '',
+                payments: [
+                    { amount: 0, date: '', done: false },
+                    { amount: 0, date: '', done: false },
+                    { amount: 0, date: '', done: false }
+                ]
+            }
         ];
 
-        // נתוני מקורות מימון מדויקים מהתמונה (image_0edcfa.png) - ההוצאה 3000 נמחקה
+        // נתוני מקורות מימון מדויקים מהתמונה (image_0edcfa.png)
         const DEFAULT_FUNDING_ITEMS = [
-            // הלוואות יהב
             { id: "f1", category: "הלוואות יהב", name: "הלוואה 1", amount: 10000, returnVal: "850 (12 חודשים)", done: true },
             { id: "f2", category: "הלוואות יהב", name: "הלוואה 2", amount: 10000, returnVal: "850 (12 חודשים)", done: true },
             { id: "f3", category: "הלוואות יהב", name: "הלוואה 3", amount: 18000, returnVal: "750 (24 חודשים)", done: true },
@@ -481,40 +709,66 @@
             { id: "f6", category: "הלוואות יהב", name: "הלוואה 6", amount: 15000, returnVal: "650 (24 חודשים)", done: true },
             { id: "f7", category: "הלוואות יהב", name: "הלוואה 7", amount: 25000, returnVal: "1100 (24 חודשים)", done: true },
             { id: "f8", category: "הלוואות יהב", name: "הלוואה 8", amount: 8000, returnVal: "682 (12 חודשים)", done: true },
-            // ניסקון
             { id: "f9", category: "ניסקון", name: "ניסקון 1/4", amount: 45000, returnVal: "-", done: true },
-            // חסכון חודשי
             { id: "f10", category: "חיסכון חודשי", name: "01-אפר", amount: 12450, returnVal: "-", done: true },
             { id: "f11", category: "חיסכון חודשי", name: "01-מאי", amount: 11000, returnVal: "-", done: true },
             { id: "f12", category: "חיסכון חודשי", name: "01-יוני (רטרו)", amount: 19700, returnVal: "-", done: true },
             { id: "f13", category: "חיסכון חודשי", name: "01-יול (הבראה)", amount: 13200, returnVal: "-", done: true },
             { id: "f14", category: "חיסכון חודשי", name: "01-אוג", amount: 11000, returnVal: "-", done: false },
             { id: "f15", category: "חיסכון חודשי", name: "01-ספט (על חשבון יובל)", amount: 10000, returnVal: "-", done: false },
-            // הון עצמי
             { id: "f16", category: "הון עצמי", name: "הן עצמי", amount: 19550, returnVal: "-", done: true }
         ];
 
         // --- ניהול המצב (State) של האפליקציה ---
         let appState = {
-            currentScreen: 'dashboard', // "dashboard", "wedding", "henna", "funding"
+            currentScreen: 'dashboard', 
             weddingItems: [],
             hennaItems: [],
             fundingItems: [],
-            bankBalance: 180000 // סכום התחלתי של "יש בבנק"
+            bankBalance: 180000 
         };
 
-        // טעינת נתונים ראשונית מה-LocalStorage או שימוש בברירת מחדל
+        // פונקציית הגירה מנתונים ישנים למבנה תשלומים חדש במידת הצורך
+        function migrateItemsToPayments(items) {
+            return items.map(item => {
+                if (!item.payments) {
+                    // המרה של ספק ישן ל-3 תשלומים
+                    const oldPaid = Number(item.paid || 0);
+                    const oldCost = Number(item.cost || 0);
+                    item.payments = [
+                        { amount: oldPaid, date: 'תשלום 1', done: oldPaid > 0 },
+                        { amount: Math.max(0, oldCost - oldPaid), date: item.notes || 'תשלום 2', done: false },
+                        { amount: 0, date: '', done: false }
+                    ];
+                }
+                // מוודא שתמיד יש בדיוק 3 תשלומים במערך
+                while (item.payments.length < 3) {
+                    item.payments.push({ amount: 0, date: '', done: false });
+                }
+                return item;
+            });
+        }
+
+        // טעינת נתונים ראשונית
         function initApp() {
             const savedWedding = localStorage.getItem('wedding_budget_items');
             const savedHenna = localStorage.getItem('henna_budget_items');
             const savedFunding = localStorage.getItem('funding_budget_items');
             const savedBank = localStorage.getItem('funding_bank_balance');
 
-            if (savedWedding) appState.weddingItems = JSON.parse(savedWedding);
-            else { appState.weddingItems = [...DEFAULT_WEDDING_ITEMS]; saveToLocalStorage('wedding'); }
+            if (savedWedding) {
+                appState.weddingItems = migrateItemsToPayments(JSON.parse(savedWedding));
+            } else { 
+                appState.weddingItems = [...DEFAULT_WEDDING_ITEMS]; 
+                saveToLocalStorage('wedding'); 
+            }
 
-            if (savedHenna) appState.hennaItems = JSON.parse(savedHenna);
-            else { appState.hennaItems = [...DEFAULT_HENNA_ITEMS]; saveToLocalStorage('henna'); }
+            if (savedHenna) {
+                appState.hennaItems = migrateItemsToPayments(JSON.parse(savedHenna));
+            } else { 
+                appState.hennaItems = [...DEFAULT_HENNA_ITEMS]; 
+                saveToLocalStorage('henna'); 
+            }
 
             if (savedFunding) appState.fundingItems = JSON.parse(savedFunding);
             else { appState.fundingItems = [...DEFAULT_FUNDING_ITEMS]; saveToLocalStorage('funding'); }
@@ -545,16 +799,31 @@
             return new Intl.NumberFormat('he-IL', { style: 'currency', currency: 'ILS', maximumFractionDigits: 0 }).format(num);
         }
 
-        // חישוב מפתחות תקציב עבור קבוצת פריטים
+        // חישוב מפתחות תקציב עבור קבוצת פריטים המבוססים על 3 תשלומים
         function calculateBudgetMetrics(items) {
             let total = 0;
             let paid = 0;
             items.forEach(item => {
                 total += Number(item.cost || 0);
-                paid += Number(item.paid || 0);
+                if (item.payments) {
+                    item.payments.forEach(p => {
+                        if (p.done) paid += Number(p.amount || 0);
+                    });
+                }
             });
             const remaining = total - paid;
             return { total, paid, remaining };
+        }
+
+        // חישוב ספציפי של תשלומים לספק בודד
+        function calculateItemPaidSum(item) {
+            let paidSum = 0;
+            if (item.payments) {
+                item.payments.forEach(p => {
+                    if (p.done) paidSum += Number(p.amount || 0);
+                });
+            }
+            return paidSum;
         }
 
         // חישוב מפתחות מימון
@@ -590,12 +859,12 @@
             document.getElementById('dash-percent').innerText = `${percent}%`;
             document.getElementById('dash-progress-bar').style.width = `${percent}%`;
 
-            // עדכון כרטיסיית חתונה מפורטת בדשבורד (עלות כוללת, כמה שולם, יתרה)
+            // עדכון כרטיסיית חתונה מפורטת בדשבורד
             document.getElementById('dash-w-total').innerText = formatILS(wMetrics.total);
             document.getElementById('dash-w-paid').innerText = formatILS(wMetrics.paid);
             document.getElementById('dash-w-remaining').innerText = formatILS(wMetrics.remaining);
 
-            // עדכון כרטיסיית חינה מפורטת בדשבורד (עלות כוללת, כמה שולם, יתרה)
+            // עדכון כרטיסיית חינה מפורטת בדשבורד
             document.getElementById('dash-h-total').innerText = formatILS(hMetrics.total);
             document.getElementById('dash-h-paid').innerText = formatILS(hMetrics.paid);
             document.getElementById('dash-h-remaining').innerText = formatILS(hMetrics.remaining);
@@ -668,6 +937,19 @@
             navigateTo(appState.currentScreen);
         }
 
+        // החלפת סטטוס תשלום ספציפי של ספק בלחיצה ישירה מכרטיסיית הספק
+        function toggleItemPaymentDone(itemId, paymentIndex) {
+            const type = appState.currentScreen;
+            const items = (type === 'wedding') ? appState.weddingItems : appState.hennaItems;
+            const item = items.find(i => i.id === itemId);
+            if (item && item.payments && item.payments[paymentIndex]) {
+                item.payments[paymentIndex].done = !item.payments[paymentIndex].done;
+                saveToLocalStorage(type);
+                updateMetrics();
+                renderEventScreen(type);
+            }
+        }
+
         // רינדור מסך אירוע (חתונה או חינה)
         function renderEventScreen(type) {
             const isWedding = (type === 'wedding');
@@ -706,39 +988,48 @@
             }
 
             items.forEach((item, index) => {
-                const itemRemaining = item.cost - item.paid;
+                const totalPaidSum = calculateItemPaidSum(item);
+                const itemRemaining = item.cost - totalPaidSum;
                 const isPaidFull = item.cost > 0 && itemRemaining === 0;
 
                 const card = document.createElement('div');
-                card.className = "bg-white p-4 rounded-2xl shadow-sm border border-neutral-100 flex flex-col justify-between gap-3 md:flex-row md:items-center";
+                card.className = "bg-white p-5 rounded-3xl shadow-sm border border-neutral-100 space-y-4";
                 
+                // יצירת תצוגת התשלומים
+                let paymentsHtml = '';
+                if (item.payments) {
+                    item.payments.forEach((p, pIdx) => {
+                        if (Number(p.amount) > 0 || p.date) {
+                            paymentsHtml += `
+                                <div onclick="toggleItemPaymentDone('${item.id}', ${pIdx})" class="flex justify-between items-center bg-neutral-50 p-2 rounded-xl border border-neutral-100 text-xs cursor-pointer hover:bg-neutral-100/70 transition">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-5 h-5 rounded-md border flex items-center justify-center transition ${p.done ? 'bg-emerald-500 border-emerald-500 text-white' : 'bg-white border-neutral-300 text-transparent'}">
+                                            <i class="fa-solid fa-check text-[10px]"></i>
+                                        </div>
+                                        <span class="font-bold text-neutral-700">תשלום ${pIdx + 1}:</span>
+                                        <span class="text-neutral-500">${p.date || 'ללא תאריך'}</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="font-bold text-neutral-800">${formatILS(p.amount)}</span>
+                                        <span class="text-[9px] font-bold px-1.5 py-0.5 rounded-full ${p.done ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800'}">
+                                            ${p.done ? 'שולם' : 'ממתין'}
+                                        </span>
+                                    </div>
+                                </div>
+                            `;
+                        }
+                    });
+                }
+
                 card.innerHTML = `
-                    <div class="space-y-1">
-                        <div class="flex items-center gap-2">
-                            <h4 class="font-bold text-neutral-800 text-base">${item.name}</h4>
-                            ${isPaidFull ? '<span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded-full">שולם במלואו</span>' : ''}
+                    <div class="flex justify-between items-start">
+                        <div class="space-y-1">
+                            <div class="flex items-center gap-2">
+                                <h4 class="font-extrabold text-neutral-800 text-lg">${item.name}</h4>
+                                ${isPaidFull ? '<span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded-full">שולם במלואו</span>' : ''}
+                            </div>
+                            <p class="text-xs text-neutral-400 font-medium">${item.notes || 'אין הערות נוספות'}</p>
                         </div>
-                        <p class="text-xs text-neutral-400 font-medium">
-                            ${item.notes && item.notes !== '-' ? `📌 מועד/הערה: ${item.notes}` : 'אין הערות'}
-                        </p>
-                    </div>
-
-                    <div class="flex justify-between items-center md:gap-6">
-                        <div class="grid grid-cols-3 gap-4 text-right md:text-left">
-                            <div>
-                                <span class="text-[10px] text-neutral-400 block">עלות</span>
-                                <span class="text-sm font-semibold text-neutral-700">${formatILS(item.cost)}</span>
-                            </div>
-                            <div>
-                                <span class="text-[10px] text-neutral-400 block">שולם</span>
-                                <span class="text-sm font-semibold text-emerald-600">${formatILS(item.paid)}</span>
-                            </div>
-                            <div>
-                                <span class="text-[10px] text-neutral-400 block">נשאר</span>
-                                <span class="text-sm font-bold ${itemRemaining > 0 ? 'text-rose-600' : 'text-neutral-500'}">${formatILS(itemRemaining)}</span>
-                            </div>
-                        </div>
-
                         <div class="flex gap-1">
                             <button onclick="openEditModal('${item.id}')" class="w-8 h-8 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center hover:bg-amber-100 transition active:scale-90">
                                 <i class="fa-solid fa-pen text-xs"></i>
@@ -746,6 +1037,30 @@
                             <button onclick="deleteItem('${item.id}')" class="w-8 h-8 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center hover:bg-rose-100 transition active:scale-90">
                                 <i class="fa-solid fa-trash text-xs"></i>
                             </button>
+                        </div>
+                    </div>
+
+                    <!-- אזור התשלומים המפורט -->
+                    <div class="space-y-1.5">
+                        <span class="text-[10px] font-bold text-neutral-400 block">חלוקת תשלומים (לחצו לשינוי סטטוס):</span>
+                        <div class="grid grid-cols-1 gap-1.5">
+                            ${paymentsHtml || '<div class="text-xs text-neutral-400 italic">לא הוגדרו תשלומים לספק זה. לחצו על עריכה להגדרה.</div>'}
+                        </div>
+                    </div>
+
+                    <!-- סיכומי עלויות של הספק -->
+                    <div class="grid grid-cols-3 gap-2 text-center pt-3 border-t border-neutral-100 bg-neutral-50/40 p-2.5 rounded-2xl">
+                        <div>
+                            <span class="text-[9px] text-neutral-400 block font-bold">עלות כוללת</span>
+                            <span class="text-sm font-black text-neutral-800">${formatILS(item.cost)}</span>
+                        </div>
+                        <div>
+                            <span class="text-[9px] text-emerald-600 block font-bold">שולם בפועל</span>
+                            <span class="text-sm font-black text-emerald-600">${formatILS(totalPaidSum)}</span>
+                        </div>
+                        <div>
+                            <span class="text-[9px] text-rose-600 block font-bold">נשאר לתשלום</span>
+                            <span class="text-sm font-black ${itemRemaining > 0 ? 'text-rose-600' : 'text-neutral-500'}">${formatILS(itemRemaining)}</span>
                         </div>
                     </div>
                 `;
@@ -771,14 +1086,12 @@
 
                 catItems.forEach(item => {
                     const itemRow = document.createElement('div');
-                    // השורה כולה היא קליקבילית לשינוי מצב "בוצע"
                     itemRow.className = `p-3 rounded-xl border flex justify-between items-center transition cursor-pointer hover:bg-neutral-50/50 ${item.done ? 'bg-emerald-50/40 border-emerald-100' : 'bg-white border-neutral-100'}`;
                     itemRow.setAttribute('onclick', `toggleFundingDone('${item.id}')`);
                     
                     itemRow.innerHTML = `
                         <div class="flex items-center gap-3">
-                            <!-- צ'קבוקס בוצע -->
-                            <div class="w-6 h-6 rounded-lg border flex items-center justify-center transition ${item.done ? 'bg-emerald-500 border-emerald-500 text-white' : 'bg-white border-neutral-300 text-transparent'}">
+                            <div class="w-6 h-6 rounded-lg border flex items-center justify-center transition ${item.done ? 'bg-emerald-500 border-emerald-500 text-white' : 'bg-white border-neutral-300 text-transparent hover:border-emerald-500'}">
                                 <i class="fa-solid fa-check text-xs"></i>
                             </div>
                             <div>
@@ -790,8 +1103,7 @@
                         <div class="flex items-center gap-4">
                             <span class="font-black text-sm ${item.amount < 0 ? 'text-rose-600' : 'text-neutral-800'}">${formatILS(item.amount)}</span>
                             
-                            <!-- מניעת פעפוע האירוע (stopPropagation) בכפתורי העריכה והמחיקה כדי שלא יסמנו "בוצע" בטעות -->
-                            <div class="flex gap-1 animate-fade-in" onclick="event.stopPropagation();">
+                            <div class="flex gap-1" onclick="event.stopPropagation();">
                                 <button onclick="openEditFundingModal('${item.id}')" class="w-7 h-7 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center hover:bg-blue-100 transition active:scale-90">
                                     <i class="fa-solid fa-pen text-[10px]"></i>
                                 </button>
@@ -832,12 +1144,19 @@
 
             if (!item) return;
 
-            document.getElementById('modal-title').innerText = 'עריכת פרטי הוצאה';
+            document.getElementById('modal-title').innerText = 'עריכת פרטי הוצאה ותשלומים';
             document.getElementById('modal-item-id').value = item.id;
             document.getElementById('modal-name').value = item.name;
             document.getElementById('modal-cost').value = item.cost;
-            document.getElementById('modal-paid').value = item.paid;
             document.getElementById('modal-notes').value = item.notes || '';
+
+            // טעינת שלושת התשלומים למודל העריכה
+            for (let i = 1; i <= 3; i++) {
+                const p = item.payments && item.payments[i - 1] ? item.payments[i - 1] : { amount: 0, date: '', done: false };
+                document.getElementById(`pay${i}-amount`).value = p.amount || '';
+                document.getElementById(`pay${i}-date`).value = p.date || '';
+                document.getElementById(`pay${i}-done`).checked = p.done || false;
+            }
 
             document.getElementById('item-modal').classList.remove('hidden');
         }
@@ -854,16 +1173,25 @@
             const id = document.getElementById('modal-item-id').value;
             const name = document.getElementById('modal-name').value;
             const cost = Number(document.getElementById('modal-cost').value);
-            const paid = Number(document.getElementById('modal-paid').value);
             const notes = document.getElementById('modal-notes').value;
+
+            // בניית מערך התשלומים מהמודל
+            const payments = [];
+            for (let i = 1; i <= 3; i++) {
+                payments.push({
+                    amount: Number(document.getElementById(`pay${i}-amount`).value) || 0,
+                    date: document.getElementById(`pay${i}-date`).value,
+                    done: document.getElementById(`pay${i}-done`).checked
+                });
+            }
 
             if (id) {
                 const index = items.findIndex(i => i.id === id);
                 if (index !== -1) {
-                    items[index] = { ...items[index], name, cost, paid, notes };
+                    items[index] = { ...items[index], name, cost, notes, payments };
                 }
             } else {
-                items.push({ id: Date.now().toString(), name, cost, paid, notes });
+                items.push({ id: Date.now().toString(), name, cost, notes, payments });
             }
 
             saveToLocalStorage(type);
